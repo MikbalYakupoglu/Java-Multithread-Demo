@@ -1,11 +1,12 @@
-package demo1;
+package section2.demo2;
 
-class Runner extends Thread{
+class Runner implements Runnable{
     private final int id;
 
     public Runner(int id){
         this.id = id;
     }
+
 
     @Override
     public void run(){
@@ -14,20 +15,20 @@ class Runner extends Thread{
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
                 throw new RuntimeException(e);
             }
         }
     }
 }
 
-
-
 public class App {
     public static void main(String[] args) {
-        Runner runner1 = new Runner(1);
-        runner1.start();
+        Thread t1 = new Thread(new Runner(1));
+        Thread t2 = new Thread(new Runner(2));
 
-        Runner runner2 = new Runner(2);
-        runner2.start();
+        t1.start();
+        t2.start();
+
     }
 }

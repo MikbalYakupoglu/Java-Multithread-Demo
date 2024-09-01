@@ -1,4 +1,4 @@
-package demo4;
+package section3.demo1;
 
 public class App {
     public static void main(String[] args) {

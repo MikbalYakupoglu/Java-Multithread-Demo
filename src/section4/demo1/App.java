@@ -1,4 +1,4 @@
-package demo6;
+package section4.demo1;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -6,8 +6,6 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Executor;
-import java.util.concurrent.Executors;
 
 public class App {
 
